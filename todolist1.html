@@ -24,24 +24,24 @@
                 color: lightgray;
             }
         </style>
-    </body>
 
-    <script>
-        new Vue({
-            el: '#app',
-            data: {
-                todos: [
-                    {done:false, text:'빵사기'},
-                    {done:false, text:'커피사기'}
-                ]
-            },
-            computed: {
-                remaining: function() {
-                    return this.todos.filter(function(val) {
-                        return val.done;
-                    }).length;
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    todos: [
+                        {done:false, text:'빵사기'},
+                        {done:false, text:'커피사기'}
+                    ]
+                },
+                computed: {
+                    remaining: function() {
+                        return this.todos.filter(function(val) {
+                            return val.done;
+                        }).length;
+                    }
                 }
-            }
-        })
-    </script>
+            })
+        </script>
+    </body>
 </html>
